@@ -1,0 +1,53 @@
+@import 'color', 'layout';
+
+// Define the styles for the footer
+footer {
+  background-color: $footer-bg-color;
+  color: $footer-text-color;
+  padding: $footer-padding; 
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer-nav {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    
+
+      li {
+        margin-left: 20px;
+
+        a {
+          color: $footer-nav-link-color;
+          text-decoration: none;
+
+          &:hover {
+            color: $footer-nav-link-hover-color;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .container {
+      flex-direction: column;
+
+      .footer-nav {
+        justify-content: center;
+        margin-top: 20px;
+
+        li {
+          margin: 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
